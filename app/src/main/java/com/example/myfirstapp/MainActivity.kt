@@ -43,7 +43,14 @@ class MainActivity : AppCompatActivity() {
             putExtra(EXTRA_MESSAGE,message)
         }
         startActivity(intent)
-        //Do something in response to button
+
+    }
+
+    fun goToLocation(view: View) {
+        val intent = Intent(this, GooglePlayServiceLocation::class.java).apply {
+        }
+        startActivity(intent)
+
     }
 
     private fun setupPermissions() {

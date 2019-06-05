@@ -24,7 +24,7 @@ const val EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE"
 class MainActivity : AppCompatActivity() {
 
     var client : FusedLocationProviderClient? = null
-    var FINE_REQUEST_CODE = 1
+    var FINE_REQUEST_CODE = 2
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -14,8 +14,10 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.location.FusedLocationProviderClient
 import android.util.Log
+import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import com.google.android.gms.common.api.GoogleApiClient
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 
@@ -30,9 +32,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        HelloTextView.setText("This is text set from JAva")
+        button3.setText("Kotlin")
+
         client = LocationServices.getFusedLocationProviderClient(this)
 
         setupPermissions()
+
+        button3.setOnClickListener { Toast.makeText(this,"Boton cliqueado",Toast.LENGTH_SHORT).show() }
     }
 
     /** Called when the user taps the Send button */
